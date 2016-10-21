@@ -17,3 +17,5 @@ for i in files:
 print '  Total files: ', num_files
 print '  Total hours: ', total_hours
 print 'Average hours: ', total_hours/num_files
+
+#TODO: calculate total_hours/days
