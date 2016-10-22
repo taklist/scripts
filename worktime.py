@@ -1,5 +1,16 @@
 import os
-path = '../work_journal/'
+
+pathfile = open("journalpath")
+path = ''
+
+for line in pathfile:
+    if line.startswith('journalpath='):
+        path = line.split('=')[1]
+
+if path is '':
+    print 'Error: Missing journalpath file/line\n'
+    sys.exit()
+
 files = os.listdir(path)
 
 num_days = 0
