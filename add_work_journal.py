@@ -3,7 +3,7 @@ import sys
 import os.path
 
 try:
-    hours = int(input('Enter hours of work: '))
+    hours = float(input('Enter hours of work: '))
     if hours > 10:
         if raw_input('Really? y/n: ') != 'y':
             sys.exit()

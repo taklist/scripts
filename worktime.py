@@ -8,7 +8,7 @@ total_hours = 0
 for i in files:
     try:
         fil = open(path + i, 'r')
-        total_hours += int(fil.readline())
+        total_hours += float(fil.readline())
         if '_1' in i:
             num_days += 1
     except IOError:
