@@ -15,10 +15,12 @@ def notify(title, subtitle, message):
     c = '-closeLabel No'
     os.system('terminal-notifier {}'.format(' '.join([m, t, s, c])))
 
-time.sleep(minutes*60)
+
+for i in range(int(sys.argv[1])):
+    print 'Minutes remaining: ', int(sys.argv[1])-i
+    time.sleep(60)
     
 # Calling the function
-notify(title    = 'A Real Notification',
-       subtitle = 'with python',
-       message  = 'Hello, this is me, notifying you!')
-
+notify(title    = 'Work Timer',
+       subtitle = sys.argv[1],
+       message  = 'You are finished!')
